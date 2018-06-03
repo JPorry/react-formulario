@@ -10,8 +10,8 @@ const formCreator = name => {
   if (!formState[name]) {
     setFormState({
       [name]: {
-        fields: {}
-      }
+        fields: {},
+      },
     });
   }
 
@@ -29,12 +29,12 @@ const formCreator = name => {
       if (formState[name]) {
         return {
           ...formState[name],
-          state: combineFieldStates(formState[name])
+          state: combineFieldStates(formState[name]),
         };
       }
 
       return { fields: {}, state: {} };
-    }
+    },
   };
 };
 

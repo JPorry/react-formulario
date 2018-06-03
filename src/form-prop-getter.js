@@ -28,7 +28,7 @@ export default function form(formName, options) {
       if (formState[formName]) {
         _formState = {
           ...formState[formName],
-          state: formStatus
+          state: formStatus,
         };
       }
 
@@ -39,6 +39,6 @@ export default function form(formName, options) {
           options.onSubmitError &&
           options.onSubmitError(e, _formState);
       }
-    }
+    },
   };
 }

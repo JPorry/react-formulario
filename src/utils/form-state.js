@@ -4,7 +4,7 @@ const subscribers = [];
 export const setFormState = newFormState => {
   formState = {
     ...formState,
-    ...newFormState
+    ...newFormState,
   };
 
   subscribers.map(cb => cb());

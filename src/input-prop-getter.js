@@ -42,7 +42,7 @@ export default function input(
       dirty: false,
       touched: false,
       valid: isValid,
-      invalid: !isValid
+      invalid: !isValid,
     };
     setFormState(
       deepInsert(formState, `${formName}.fields.${name}`, {
@@ -50,7 +50,7 @@ export default function input(
         state: initialState,
         errors,
         validators,
-        transform
+        transform,
       })
     );
   }
@@ -60,15 +60,15 @@ export default function input(
 
   if (props.type === 'checkbox') {
     elementValue = {
-      checked: !!formElementValue
+      checked: !!formElementValue,
     };
   } else if (props.type === 'radio') {
     elementValue = {
-      checked: formElementValue === props.value
+      checked: formElementValue === props.value,
     };
   } else {
     elementValue = {
-      value: formElementValue
+      value: formElementValue,
     };
   }
 
@@ -101,9 +101,9 @@ export default function input(
             pristine: false,
             dirty: true,
             valid: isValid,
-            invalid: !isValid
+            invalid: !isValid,
           },
-          errors
+          errors,
         })
       );
       onChange && onChange(e);
@@ -114,6 +114,6 @@ export default function input(
       );
       onClick && onClick(e);
     },
-    ...elementValue
+    ...elementValue,
   };
 }

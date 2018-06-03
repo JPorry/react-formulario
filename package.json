@@ -4,6 +4,7 @@
   "description": "Simple form management for react",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --write \"./src/**/*.{js,css}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/JPorry/react-formulario#readme",
   "dependencies": {
     "react": "^16.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.4"
   }
 }

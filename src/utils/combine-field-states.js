@@ -4,7 +4,7 @@ export default function combineFieldStates(formSlice) {
     dirty: false,
     touched: false,
     valid: true,
-    invalid: false
+    invalid: false,
   };
 
   const fields = Object.keys(formSlice.fields);
@@ -16,7 +16,7 @@ export default function combineFieldStates(formSlice) {
       dirty: state.dirty || fieldState.dirty,
       touched: state.touched || fieldState.touched,
       valid: state.valid && fieldState.valid,
-      invalid: state.invalid || fieldState.invalid
+      invalid: state.invalid || fieldState.invalid,
     };
   });
 
